@@ -4,19 +4,33 @@ import json
 
 class Json(ABC):
     def __init__(self, file, vacancies):
+        """
+
+        :param file: название файла, по которому совершаются все операции
+        :param vacancies: python объект с вакансиями, который мы получили через API
+        """
         self.file = file
         self.vacancies = vacancies
 
     @abstractmethod
     def write_info(self):
+        """
+        Метод для записи информации в файл
+        """
         pass
 
     @abstractmethod
     def add_info(self):
+        """
+        Метод для добавления информации в файл
+        """
         pass
 
     @abstractmethod
     def delete_info(self):
+        """
+        Метод для удаления всей информации из файла
+        """
         pass
 
 
